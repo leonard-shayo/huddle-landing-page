@@ -1,0 +1,400 @@
+/* https://piccalil.li/blog/a-modern-css-reset */
+
+/* Box sizing rules */
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800&family=Open+Sans&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,700;1,100;1,200;1,300&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,700;1,100;1,200;1,300&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+h1 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  /* height: 100%; */
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  color: hsl(233, 12%, 13%);
+  font-size: 62.5%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: var(--clr-accent-100);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: nnone;
+}
+
+header {
+  padding: 4rem 2rem;
+}
+
+.header-logo {
+  width: clamp(100px, 45vw, 200px);
+}
+
+.header-logo img {
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  width: min(1150px, 100%);
+  justify-content: space-between;
+  margin: auto;
+  align-items: center;
+}
+
+.btn {
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  padding: 0.5em 1em;
+  border-radius: 3rem;
+  border: 1px solid hsl(322, 100%, 66%);
+  color: hsl(322, 100%, 66%);
+  background-color: white;
+}
+
+.btn:hover {
+  border: 1px solid hsl(322, 100%, 66%);
+  color: white;
+  background-color: hsl(322, 100%, 66%);
+}
+
+.btn-reverse {
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  padding: 0.5em 1em;
+  border-radius: 3rem;
+  border: 1px solid hsl(322, 100%, 66%);
+  color: white;
+  background-color: hsl(322, 100%, 66%);
+}
+
+.btn-reverse:hover,
+.subscription-btn:hover {
+  border: 1px solid hsl(322, 100%, 66%);
+  color: hsl(322, 100%, 66%);
+  background-color: white;
+}
+
+.btn-noround {
+  border-radius: 0rem;
+}
+
+section {
+  padding: 4rem 2rem;
+}
+
+footer {
+  padding: 4rem 2rem;
+}
+
+.hero-container {
+  display: grid;
+  gap: 4rem;
+  justify-items: center;
+  width: min(1150px, 100%);
+  margin: auto;
+}
+
+.hero-container-header {
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  text-align: center;
+}
+
+.hero-container-subtitle {
+  width: min(57.1rem, 100%);
+  text-align: center;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+}
+.statistics-container {
+  width: min(1150px, 100%);
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 6rem 0rem;
+}
+
+.statistics-container h1 {
+  font-size: clamp(2rem, 4vw, 4.8rem);
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.statistics-container p {
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  margin-top: 1rem;
+  opacity: 0.7;
+}
+
+.feature {
+  width: min(1150px, 100%);
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.grow,
+.your-users {
+  background-color: hsl(207, 100%, 98%);
+}
+
+.feature + .feature {
+  margin-top: 20rem;
+}
+
+.feature-title {
+  font-weight: 700;
+  font-size: clamp(2rem, 3vw, 3.2rem);
+}
+
+.feature-description {
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  margin-top: 2rem;
+  opacity: 0.9;
+}
+
+.feature-image-container {
+  width: min(100%, 43.85rem);
+  margin: auto;
+}
+
+.brand-quote-container {
+  width: min(1150px, 100%);
+  margin: auto;
+  display: grid;
+  justify-items: center;
+  gap: 2rem;
+  padding: 7rem 0rem;
+}
+
+.brand-quote-container h1 {
+  font-weight: 700;
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  text-align: center;
+}
+
+footer {
+  background-color: #00252e;
+  color: white;
+}
+/* 
+.footer-container {
+  width: min(1150px, 100%);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 6rem 0rem;
+}
+
+.contact-description {
+  margin-top: 2rem;
+}
+
+.footer-container p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.contact-option-1 {
+  margin-top: 2rem;
+}
+
+.contact-option {
+  display: flex;
+  gap: 1rem;
+}
+
+.contact-option + .contact-option {
+  margin-top: 1rem;
+}
+
+.news-later-title {
+  font-size: clamp(2rem, 3vw, 3.2rem);
+} */
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit minmax(15rem, 1fr));
+  row-gap: 2rem;
+  column-gap: 1rem;
+  width: min(1150px, 100%);
+  margin: auto;
+  padding: 2rem 0rem;
+  align-items: start;
+
+  grid-template-areas:
+    "footer-logo newsletter-title"
+    "contact-description newsletter-description"
+    "contact-options newsletter-form"
+    "social-icons ............";
+}
+
+.footer-logo {
+  grid-area: footer-logo;
+}
+
+.newsletter-title {
+  grid-area: newsletter-title;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.contact-description {
+  grid-area: contact-description;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  width: min(29rem, 100%);
+}
+
+.newsletter-description {
+  grid-area: newsletter-description;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  width: min(29rem, 100%);
+}
+
+.contact-options {
+  grid-area: contact-options;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+}
+
+.newsletter-form {
+  grid-area: newsletter-form;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 1rem;
+  /* align-items: start; */
+}
+
+.subscription-btn {
+  color: white;
+  background-color: hsl(322, 100%, 66%);
+  border: 1px solid hsl(322, 100%, 66%);
+  font-size: clamp(1rem, 3vw, 1.6rem);
+}
+
+input {
+  padding: 1rem;
+}
+
+.social-icons {
+  grid-area: social-icons;
+}
+
+.contact-option {
+  display: flex;
+  gap: 1rem;
+}
+
+.contact-option + .contact-option {
+  margin-top: 1rem;
+}
+
+@media (width<=375px) {
+  .feature-title {
+    text-align: center;
+  }
+
+  .feature-description {
+    text-align: center;
+  }
+
+  .footer-container {
+    grid-template-areas:
+      "newsletter-title"
+      "  newsletter-description"
+      "  newsletter-form"
+      "footer-logo  "
+      "contact-description "
+      "contact-options "
+      "social-icons ";
+  }
+  .newsletter-form {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    /* align-items: start; */
+  }
+
+  .subscription-btn {
+    padding: 1rem;
+  }
+}
+
+@media (width>=735px) {
+  .footer-container {
+    column-gap: 7rem;
+  }
+}
